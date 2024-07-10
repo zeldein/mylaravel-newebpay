@@ -9,7 +9,7 @@
             "email": "zeldein@gmail.com"
         }
     ],
-    "homepage": "zeldein/mylaravel-newebpay",
+    "homepage": "https://www.github.com/zeldein/mylaravel-newebpay",
     "require": {
         "php": ">=8.1",
         "guzzlehttp/guzzle": ">=7.2",
