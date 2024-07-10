@@ -36,6 +36,8 @@ class MPGResult extends Result
      */
     public function message(): string
     {
+		if ($this->data['TradeInfo'] == null)
+			return "";
         return $this->data['TradeInfo']['Message'];
     }
 

@@ -319,9 +319,11 @@ class NewebPayMPG extends NewebPayRequest
     {
         $cvscom = $cvscom ?? $this->config->get('newebpay.CVSCOM');
 
-        if ($cvscom !== CVSCOM::NONE) {
+        if ($cvscom == null)
+            $cvscom = CVSCOM::NONE;
+        //if ($cvscom !== CVSCOM::NONE) {
             $this->tradeData['CVSCOM'] = $cvscom->value;
-        }
+        //}
 
         return $this;
     }

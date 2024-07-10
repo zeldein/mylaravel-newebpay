@@ -40,9 +40,11 @@ class Factory
     /**
      * MPG 交易回應結果
      */
-    public function result(Request $request): MPGResult
+    public function result(Request $request, $merchantId, $key, $iv): MPGResult
     {
         $result = new NewebPayResult($this->config, $this->session);
+		
+		$result->setMerchant($merchantId, $key, $iv);
 
         return $result->result($request);
     }
@@ -188,9 +190,11 @@ class Factory
     /**
      * 建立定期定額委託回傳結果
      */
-    public function periodResult(Request $request): PeriodResult
+    public function periodResult(Request $request, $merchantId, $key, $iv): PeriodResult
     {
         $result = new NewebPayPeriodResult($this->config, $this->session);
+
+        $result->setMerchant($merchantId, $key, $iv);
 
         return $result->result($request);
     }
@@ -198,9 +202,11 @@ class Factory
     /**
      * 定期定額每期委託完成回傳結果
      */
-    public function periodNotify(Request $request): PeriodNotifyResult
+    public function periodNotify(Request $request, $merchantId, $key, $iv): PeriodNotifyResult
     {
         $result = new NewebPayPeriodNotify($this->config, $this->session);
+
+        $result->setMerchant($merchantId, $key, $iv);
 
         return $result->result($request);
     }

@@ -41,8 +41,20 @@ abstract class NewebPay
         $this->hashKey = $this->config->get('newebpay.hash_key');
         $this->hashIV = $this->config->get('newebpay.hash_iv');
 
-        $this->setTimestamp();
+        //$this->setTimestamp();
+        //$this->boot();
+    }
+
+    public function setMerchant($merchantId, $key, $iv) {
+
+        $this->merchantID = $merchantId;
+        $this->hashKey = $key;
+        $this->hashIV = $iv;
+		
+		$this->setTimestamp();
         $this->boot();
+
+        return $this;
     }
 
     /**

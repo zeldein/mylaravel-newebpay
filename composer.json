@@ -1,19 +1,15 @@
 {
-    "name": "ycs77/laravel-newebpay",
+    "name": "zeldein/mylaravel-newebpay",
     "description": "A library of connecting newebpay's API service.",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "w4ll4se",
-            "email": "wallase.huang@gmail.com"
-        },
-        {
-            "name": "Lucas Yang",
-            "email": "yangchenshin77@gmail.com"
+            "name": "zeldein",
+            "email": "zeldein@gmail.com"
         }
     ],
-    "homepage": "https://github.com/ycs77/laravel-newebpay",
+    "homepage": "zeldein/mylaravel-newebpay",
     "require": {
         "php": ">=8.1",
         "guzzlehttp/guzzle": ">=7.2",
@@ -26,7 +22,7 @@
     "require-dev": {
         "mockery/mockery": "^1.4",
         "orchestra/testbench": ">=7.0",
-        "pestphp/pest": "^1.23 || ^2.6"
+        "pestphp/pest": "^2.6"
     },
     "autoload": {
         "psr-4": {
